@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditya Chauhan — Poetry & Thoughts</title>
+<meta name="description" content="Poetry and thoughts by Aditya Chauhan. Written at night, about longing, grief and loneliness.">
+<meta name="author" content="Aditya Chauhan">
+<meta name="google-site-verification" content="AofsThnS3feToGcPNoT3Gwqk5dDWAUT-ocbSgvZBYWo" />
+<meta property="og:title" content="Aditya Chauhan — Poetry & Thoughts">
+<meta property="og:description" content="The longer the night, the deeper the grief. Words by Aditya Chauhan.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aditya Chauhan","jobTitle":"Poet","description":"Poet and writer of quiet, dark thoughts.","sameAs":["https://www.instagram.com/giga_adi47"]}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Newsreader:ital,wght@0,300;1,300&display=swap">
+<style>
+:root{--bg:#06080c;--ink:#e2e7ef;--dim:#8793a4;--warm:#e0a868;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:inherit}
+body{margin:0;background:#06080c;color:var(--ink);font-family:'Newsreader',Georgia,serif;font-weight:300;overflow-x:hidden;text-shadow:0 0 22px rgba(0,0,0,.8)}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.bokeh{display:none;position:fixed;inset:0;z-index:0;overflow:hidden;filter:blur(26px);background:linear-gradient(#06080c,#0b1018)}
+.fb .bokeh{display:block}
+.bokeh i{position:absolute;border-radius:50%;opacity:.28;animation:drift 22s ease-in-out infinite alternate}
+.bokeh i:nth-child(1){width:150px;height:150px;left:6%;top:62%;background:#3f5f86}
+.bokeh i:nth-child(2){width:100px;height:100px;left:70%;top:70%;background:#34506f;animation-delay:-6s}
+.bokeh i:nth-child(3){width:90px;height:90px;left:70%;top:14%;background:#c9d3e2;opacity:.4}
+.bokeh i:nth-child(4){width:120px;height:120px;left:20%;top:78%;background:var(--warm);opacity:.25;animation-delay:-3s}
+@keyframes drift{to{transform:translate(40px,-30px) scale(1.15)}}
+#night{position:fixed;inset:0;z-index:1;pointer-events:none;background:#000;opacity:var(--nt,0)}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.72))}
+main{position:relative;z-index:2}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:300;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+section{position:relative;min-height:100svh;padding:14vh 9vw;max-width:780px;margin:0 auto;display:flex;flex-direction:column;justify-content:center}
+section[data-n]::before{content:attr(data-n);position:absolute;right:2vw;top:6vh;font-style:italic;font-size:42vw;line-height:1;color:#fff;opacity:.035;pointer-events:none}
+.side{position:fixed;left:10px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left center;z-index:3}
+.hud{position:fixed;right:16px;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:3;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.hud button{padding:.3em 0;font-size:.62rem}
+#clk{font-size:.85rem;color:var(--ink);letter-spacing:.25em}
+.lead{max-width:22em;line-height:1.65;font-size:1.15rem;color:var(--dim);animation:rise 4s 5s both}
+.poem{font-size:clamp(1.55rem,6.4vw,2.6rem);line-height:1.42;font-style:italic;margin:.8em 0 1em}
+h1.poem{font-size:clamp(2.7rem,12.5vw,5.4rem);line-height:1.04;margin:.3em 0 .6em;letter-spacing:-.02em;font-weight:300}
+.stanza{display:block;margin-bottom:1.3em}
+h1 .stanza{margin:0}
+.ln{display:block}
+.w{display:inline-block;opacity:0;filter:blur(9px);transform:translateY(.4em);
+ transition:opacity 1.9s var(--wd),filter 1.9s var(--wd),transform 1.9s var(--wd),color 6s calc(var(--wd) + 1s),letter-spacing 7s calc(var(--wd) + 1.2s) ease-out,text-shadow 6s calc(var(--wd) + 1s)}
+.poem.in .w{opacity:1;filter:none;transform:none}
+/* words that act out their meaning */
+.poem.in .fx-ridic{transform:rotate(-2.5deg)}
+.poem.in .fx-long{letter-spacing:.22em}
+.poem.in .fx-short{letter-spacing:-.06em}
+.poem.in .fx-cold{color:#a9cdf2;text-shadow:0 0 20px rgba(130,185,245,.6)}
+.poem.in .fx-grief{color:#cfa4a4;animation:trem 3.6s calc(var(--wd) + 2s) ease-in-out infinite}
+.poem.in .fx-lost{animation:lost 9s calc(var(--wd) + 3.5s) ease-in forwards}
+.poem.in .fx-forget{animation:forget 8s calc(var(--wd) + 3s) ease-in forwards}
+.poem.in .fx-quiet{animation:quiet 8s calc(var(--wd) + 2.5s) ease-in forwards}
+.poem.in .fx-knock{animation:knock 1.5s calc(var(--wd) + 1.6s) 1}
+.fx-deep{transition:opacity 1.9s var(--wd),filter 1.9s var(--wd),transform 7s calc(var(--wd) + 1s),color 7s calc(var(--wd) + 1s)}
+.poem.in .fx-deep{transform:translateY(.3em);color:#8695b0}
+@keyframes lost{to{opacity:.1;filter:blur(5px);transform:translateY(.4em)}}
+@keyframes forget{to{opacity:.08;filter:blur(9px);letter-spacing:.14em}}
+@keyframes quiet{to{opacity:.28;transform:scale(.88);filter:blur(1.5px)}}
+@keyframes trem{0%,100%{transform:translate(0,0)}50%{transform:translate(.6px,-.9px)}}
+@keyframes knock{0%,100%{transform:none}8%,30%,58%{transform:translateX(-5px)}16%,38%,66%{transform:none}}
+.sig{color:var(--warm)}
+.row{display:flex;flex-wrap:wrap;gap:18px;margin-top:2.4em}
+a.btn,button{display:inline-block;background:none;border:0;border-bottom:1px solid var(--dim);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-weight:300;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:.7em 0;cursor:pointer;text-decoration:none;transition:.4s}
+a.btn:hover,button:hover{color:var(--warm);border-color:var(--warm)}
+.ghost{list-style:none;padding:0;margin:2em 0 0}
+.ghost li{display:flex;gap:1.4em;align-items:baseline;padding:1.1em 0;border-top:1px solid #1d2531}
+.ghost b{font-weight:300;font-style:italic;font-size:1.5rem;color:#46526a}
+.ghost s{text-decoration:none;background:#161d28;color:transparent;border-radius:2px;user-select:none}
+h2{font-weight:300;font-style:italic;font-size:clamp(1.8rem,7vw,2.6rem);margin:.4em 0 .5em;line-height:1.15}
+footer{padding:3em 9vw 4em;text-align:center;position:relative;z-index:2;color:#5a6679}
+@keyframes rise{from{opacity:0;filter:blur(10px);transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.w{opacity:1;filter:none;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div class="bokeh"><i></i><i></i><i></i><i></i></div>
+<div id="night"></div><div class="grain"></div><div class="vig"></div>
+<div class="side mono">Aditya Chauhan · written at night</div>
+<div class="hud"><span class="mono" id="clk">18:40</span><button id="snd">rain sound: off</button></div>
+
+<main>
+<section>
+  <span class="mono">poems &amp; thoughts</span>
+  <h1 class="poem hero"><span class="stanza"><span class="ln">I write what I can’t say <i data-fx="quiet">out loud.</i></span></span></h1>
+  <p class="lead">It’s raining somewhere inside. Touch the glass. Scroll slowly. The night gets darker as you go.</p>
+</section>
+
+<section data-n="I">
+  <span class="mono">I · thought</span>
+  <article class="poem">
+    <div class="stanza">
+      <span class="ln">What a <i data-fx="ridic">ridiculous</i> creature man is,</span>
+      <span class="ln">spending half his life <i data-fx="long">longing</i></span>
+      <span class="ln">for what he does not possess,</span>
+    </div>
+    <div class="stanza">
+      <span class="ln">and the other half <i data-fx="grief">grieving</i></span>
+      <span class="ln">what he has already <i data-fx="lost">lost.</i></span>
+    </div>
+  </article>
+  <span class="mono sig">— Aditya Chauhan</span>
+  <div class="row"><button class="share" data-t="What a ridiculous creature man is…">Send this to someone</button></div>
+</section>
+
+<section data-n="II">
+  <span class="mono">II · grief</span>
+  <article class="poem">
+    <div class="stanza">
+      <span class="ln">Days have started to grow <i data-fx="short">shorter,</i></span>
+      <span class="ln">it’ll be night soon,</span>
+    </div>
+    <div class="stanza">
+      <span class="ln">but in the darkness of the night</span>
+      <span class="ln"><i data-fx="grief">grief</i> <i data-fx="knock">knocks</i> at my door,</span>
+      <span class="ln">night brings me closer to the things</span>
+      <span class="ln">I spend my days trying to <i data-fx="forget">forget.</i></span>
+    </div>
+    <div class="stanza">
+      <span class="ln">The longer the night, the <i data-fx="deep">deeper</i> the grief,</span>
+      <span class="ln">the <i data-fx="deep">deeper</i> the grief,</span>
+      <span class="ln">the <i data-fx="cold">colder</i> the heart becomes.</span>
+    </div>
+  </article>
+  <span class="mono sig">— Aditya Chauhan</span>
+  <div class="row"><button class="share" data-t="Days have started to grow shorter, it’ll be night soon…">Send this to someone</button></div>
+</section>
+
+<section>
+  <span class="mono">still coming</span>
+  <h2>More is being written.</h2>
+  <ul class="ghost">
+    <li><b>III</b><span><s>not yet written down</s></span></li>
+    <li><b>IV</b><span><s>waiting for a bad night</s></span></li>
+    <li><b>V</b><span><s>still only in my head</s></span></li>
+  </ul>
+</section>
+
+<section>
+  <span class="mono">talk to me</span>
+  <h2>Read something that stayed with you? Tell me.</h2>
+  <p class="lead" style="animation:none">Suggest me books to read. Or message me for anything else: a question, a thought, a hello.</p>
+  <div class="row">
+    <a class="btn" href="https://www.instagram.com/giga_adi47" target="_blank" rel="noopener">Instagram @giga_adi47</a>
+    <a class="btn" href="https://ig.me/m/giga_adi47" target="_blank" rel="noopener">Send a message</a>
+  </div>
+</section>
+<footer class="mono">© Aditya Chauhan</footer>
+</main>
+
+<script id="fs" type="x-shader/x-fragment">
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+uniform vec2 R;uniform float T;uniform float uN;uniform float uF;uniform vec2 uP;uniform vec3 uW[16];
+float S(float a,float b,float t){float d=b-a;if(abs(d)<1e-4)d=1e-4;float x=clamp((t-a)/d,0.,1.);return x*x*(3.-2.*x);}
+vec3 N13(float p){vec3 q=fract(vec3(p)*vec3(.1031,.11369,.13787));q+=dot(q,q.yzx+19.19);return fract(vec3((q.x+q.y)*q.z,(q.x+q.z)*q.y,(q.y+q.z)*q.x));}
+float N(float t){return fract(sin(t*12345.564)*7658.76);}
+float Saw(float b,float t){return S(0.,b,t)*S(1.,b,t);}
+float h21(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}
+float vn(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h21(i),h21(i+vec2(1.,0.)),f.x),mix(h21(i+vec2(0.,1.)),h21(i+vec2(1.,1.)),f.x),f.y);}
+float fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<4;i++){s+=a*vn(p);p*=2.03;a*=.5;}return s;}
+vec2 DropLayer(vec2 uv,float t){
+ vec2 UV=uv;uv.y+=t*.75;vec2 a=vec2(6.,1.);vec2 grid=a*2.;
+ vec2 id=floor(uv*grid);float cs=N(id.x);uv.y+=cs;id=floor(uv*grid);
+ vec3 n=N13(id.x*35.2+id.y*2376.1);
+ vec2 st=fract(uv*grid)-vec2(.5,0.);
+ float x=n.x-.5;float y=UV.y*20.;float w=sin(y+sin(y));
+ x+=w*(.5-abs(x))*(n.z-.5);x*=.7;
+ float ti=fract(t+n.z);y=(Saw(.85,ti)-.5)*.9+.5;
+ vec2 p=vec2(x,y);float d=length((st-p)*a.yx);
+ float md=S(.4,0.,d);float r=sqrt(S(1.,y,st.y));float cd=abs(st.x-x);
+ float tr=S(.23*r,.15*r*r,cd);float tf=S(-.02,.02,st.y-y);tr*=tf*r*r;
+ y=UV.y;
+ y=fract(y*10.)+(st.y-.5);float dd=length(st-vec2(x,y));
+ float dr=S(.3,0.,dd);
+ return vec2(md+dr*r*tf,tr);
+}
+float Static(vec2 uv,float t){
+ uv*=40.;vec2 id=floor(uv);uv=fract(uv)-.5;vec3 n=N13(id.x*107.45+id.y*3543.654);
+ vec2 p=(n.xy-.5)*.7;float d=length(uv-p);float f=Saw(.025,fract(t+n.z));
+ return S(.3,0.,d)*fract(n.z*10.)*f;
+}
+vec2 Drops(vec2 uv,float t){
+ float s=Static(uv,t)*.9;vec2 m1=DropLayer(uv,t);vec2 m2=DropLayer(uv*1.85,t)*.85;
+ float c=S(.3,1.,s+m1.x+m2.x);
+ return vec2(c,max(m1.y,m2.y*.8));
+}
+vec3 scene(vec2 p,float bl){
+ float yy=clamp(p.y+.5,0.,1.);
+ vec3 nsky=mix(vec3(.012,.018,.03),vec3(.04,.055,.09),yy);
+ vec3 dsky=mix(vec3(.34,.16,.15),vec3(.06,.05,.13),S(0.,.85,yy));
+ float dusk=1.-S(0.,.4,uN);
+ vec3 col=mix(nsky,dsky*.8,dusk);
+ col+=vec3(.02,.03,.045)*bl;
+ for(int i=0;i<3;i++){
+  float fi=float(i);vec2 q=p*(4.+fi*3.)+vec2(fi*7.3,fi*3.1);
+  vec2 id=floor(q);vec2 f=fract(q)-.5;vec3 h=N13(id.x*13.7+id.y*57.3+fi*91.);
+  float r=.1+h.z*.16;float w=.03+bl*.22;float d=length(f-(h.xy-.5)*.5);
+  float lit=S(r+w,r-w,d)*step(.5,h.x)*S(.2,-.2,p.y);
+  float warm=step(.8,fract(h.z*9.));
+  vec3 lc=mix(vec3(.25,.4,.68),vec3(1.,.6,.25),warm);
+  col+=lc*lit*.2*(.5+h.y*.6);
+ }
+ float sid=floor(p.x*14.);
+ float shg=.1+.18*N(sid*7.1+3.);if(sid==-1.)shg=.26;
+ float sktop=-.5+shg;float sed=.003+bl*.04;
+ float skm=S(sed,-sed,p.y-sktop);
+ vec3 sil=vec3(.008,.011,.019);
+ vec2 wq=vec2(p.x*56.,p.y*40.);vec2 wid=floor(wq);vec2 wf=fract(wq)-.5;
+ float wl=step(mix(.975,.88,clamp(uN*2.,0.,1.)),N13(wid.x*3.1+wid.y*17.).x)*S(.1+bl*.45,0.,max(abs(wf.x)-.2,abs(wf.y)-.22));
+ vec3 wc=mix(vec3(1.,.8,.5),vec3(.5,.7,1.),step(.6,N13(wid.x*9.+wid.y).y));
+ float fogb=fbm(vec2(p.x*2.+T*.03,p.y*3.))*S(-.05,-.5,p.y);
+ col=mix(col,sil,skm);
+ col+=wc*wl*skm*.5*(1.-bl*.6);
+ col+=vec3(.045,.06,.09)*fogb*.9;
+ vec2 lw=p-vec2(-.035,-.32);float lwd=max(abs(lw.x)-.011,abs(lw.y)-.017);
+ float lwin=S(.004+bl*.05,0.,lwd);
+ col+=vec3(1.,.66,.3)*(lwin*1.1*(1.-bl*.4)+exp(-length(lw)*12.)*.3);
+ float fig=max(S(.0015,0.,length(lw-vec2(0.,.003))-.0042),S(.0015,0.,length(vec2(lw.x/.0075,(lw.y+.0125)/.0125))-1.));
+ col=mix(col,vec3(.03,.02,.02),fig*lwin*S(.55,.2,bl));
+ vec2 m=p-vec2(.07,.27);float R0=.11;float d=length(m);
+ float cl=fbm(p*vec2(1.5,3.)+vec2(T*.02,T*.004));
+ float veil=mix(1.,.22,S(.4,.74,cl))*(1.-uN*.7)*(1.-dusk*.45);
+ float edge=.0015+bl*.05;float disc=S(R0+edge,R0-edge,d);
+ vec2 mq=m/R0;float z=sqrt(max(1.-dot(mq,mq),0.));
+ vec2 mw=mq*1.5+vec2(3.,1.);float mr=fbm(mw+fbm(mw*1.8)*.9);
+ float mare=S(.47,.6,mr);
+ float tex=mix(1.,.5,mare)*(.85+.15*fbm(mq*10.));
+ for(int i=0;i<8;i++){vec3 h=N13(float(i)*3.7+.5);vec2 cc=(h.xy-.5)*1.5;float cr=.05+h.z*.1;float dd=length(mq-cc)/cr;tex+=S(.14,0.,abs(dd-1.))*.3-S(1.,.8,dd)*.12;}
+ tex+=S(.12,0.,length(mq-vec2(-.25,-.55)))*.6;
+ vec3 nrm=vec3(mq,z);float lit=dot(nrm,normalize(vec3(-.8,.35,.55)));
+ float ph=S(-.12,.25,lit);
+ float limb=pow(z,.3);
+ float moonL=disc*(tex*limb)*(ph+.04)*(1.-bl*.35);
+ col+=vec3(.82,.86,.94)*moonL*veil*1.3;
+ col+=vec3(.1,.13,.2)*disc*(1.-ph)*veil;
+ col+=vec3(.34,.44,.66)*exp(-d*4.2)*.36*veil;
+ col+=vec3(.25,.32,.46)*S(.4,.8,cl)*exp(-d*3.)*.3*(1.-uN*.6);
+ float rg=S(.02+bl*.1,0.,abs(d-R0*2.5));
+ col+=vec3(.5,.55,.7)*rg*.1*veil+vec3(.7,.5,.4)*S(.015+bl*.08,0.,abs(d-R0*2.65))*.04*veil;
+ return col;
+}
+void main(){
+ vec2 p=(gl_FragCoord.xy-.5*R)/R.y;vec2 uv=p*1.25;float t=T*.18;
+ vec2 c=Drops(uv,t);vec2 e=vec2(.0012,0.);
+ float cx=Drops(uv+e,t).x;float cy=Drops(uv+e.yx,t).x;
+ vec2 n=vec2(cx-c.x,cy-c.x);
+ float bl=mix(1.,.1,S(.1,.2,c.x));bl=clamp(bl-c.y*.9,.1,1.);
+ bl=clamp(bl*(.78+.5*fbm(p*3.+T*.01)),.1,1.);
+ float wp=0.;for(int i=0;i<16;i++){wp=max(wp,S(.075,.02,length(p-uW[i].xy))*uW[i].z);}
+ bl=mix(bl,.1,wp);
+ vec3 col=scene(p+n*1.7+uP,bl);
+ float sp=clamp(dot(n,vec2(.5,.85))*14.,-1.,1.);
+ col+=vec3(.7,.8,1.)*max(sp,0.)*.15;col-=vec3(.03)*max(-sp,0.);
+ col=col*(1.+uF*1.3)+vec3(.07,.09,.15)*uF;
+ col*=1.-uN*.5;
+ gl_FragColor=vec4(max(col,0.),1.);
+}
+</script>
+
+<script>
+(function(){
+var root=document.documentElement,cv=document.getElementById('gl'),still=matchMedia('(prefers-reduced-motion:reduce)').matches,uN=0,uF=0,gl,ok=false,U={};
+try{
+  gl=cv.getContext('webgl',{antialias:false,alpha:false});
+  var vs='attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+  function sh(t,s){var o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(o));return o}
+  var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,document.getElementById('fs').textContent));
+  gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))throw new Error('link');gl.useProgram(pr);
+  var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  var a=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
+  U.R=gl.getUniformLocation(pr,'R');U.T=gl.getUniformLocation(pr,'T');U.N=gl.getUniformLocation(pr,'uN');U.F=gl.getUniformLocation(pr,'uF');U.P=gl.getUniformLocation(pr,'uP');U.W=gl.getUniformLocation(pr,'uW[0]');ok=true;
+}catch(e){ok=false;root.classList.add('fb');cv.style.display='none'}
+function size(){if(!ok)return;var s=.6*Math.min(devicePixelRatio||1,2);cv.width=Math.round(innerWidth*s);cv.height=Math.round(innerHeight*s);gl.viewport(0,0,cv.width,cv.height);gl.uniform2f(U.R,cv.width,cv.height)}
+var t0=performance.now(),nf=t0+14000+Math.random()*16000,fs=-1;
+function flash(now){
+  if(fs<0&&now>nf){fs=now;setTimeout(thunder,1800+Math.random()*2500)}
+  if(fs>=0){var dt=(now-fs)/1000;uF=Math.max(Math.exp(-dt*7),dt>.24?.65*Math.exp(-(dt-.24)*6):0);if(dt>1.6){fs=-1;uF=0;nf=now+22000+Math.random()*30000}}
+}
+var pts=[],tx=0,ty=0,pxs=0,pys=0,wb=new Float32Array(48);
+function addPt(cx,cy){var x=(cx/innerWidth-.5)*(innerWidth/innerHeight),y=.5-cy/innerHeight,l=pts[pts.length-1];
+ if(l&&Math.hypot(l.x-x,l.y-y)<.018)return;pts.push({x:x,y:y,t:performance.now()});if(pts.length>16)pts.shift()}
+function tch(e){var t=e.touches[0];if(t)addPt(t.clientX,t.clientY)}
+addEventListener('touchstart',tch,{passive:true});addEventListener('touchmove',tch,{passive:true});
+addEventListener('mousemove',function(e){addPt(e.clientX,e.clientY);tx=(e.clientX/innerWidth-.5)*.03;ty=-(e.clientY/innerHeight-.5)*.02});
+addEventListener('deviceorientation',function(e){if(e.gamma==null)return;tx=Math.max(-1,Math.min(1,e.gamma/40))*.03;ty=-Math.max(-1,Math.min(1,((e.beta||50)-50)/40))*.02},true);
+function wipes(now){for(var i=0;i<16;i++){var q=pts[i];if(q){wb[i*3]=q.x;wb[i*3+1]=q.y;wb[i*3+2]=Math.max(0,1-(now-q.t)/5000)}else{wb[i*3+2]=0}}
+ pxs+=(tx-pxs)*.04;pys+=(ty-uN*.04-pys)*.04}
+function draw(now){if(!still)flash(now);wipes(now);gl.uniform2f(U.P,pxs,pys);gl.uniform3fv(U.W,wb);gl.uniform1f(U.T,still?40:(now-t0)/1000+40);gl.uniform1f(U.N,uN);gl.uniform1f(U.F,uF);gl.drawArrays(gl.TRIANGLES,0,3)}
+function loop(now){if(!document.hidden)draw(now);requestAnimationFrame(loop)}
+if(ok){size();addEventListener('resize',function(){size();draw(performance.now())});still?draw(performance.now()):requestAnimationFrame(loop)}
+
+/* break every poem into words so each one can arrive, hesitate and act out its meaning */
+document.querySelectorAll('.poem').forEach(function(p){
+  var t=.3;
+  p.querySelectorAll('.stanza').forEach(function(st){
+    st.querySelectorAll('.ln').forEach(function(ln){
+      var nodes=Array.prototype.slice.call(ln.childNodes);ln.textContent='';
+      nodes.forEach(function(nd){
+        var fx=nd.nodeType===1?nd.getAttribute('data-fx'):'';
+        nd.textContent.split(/\s+/).filter(Boolean).forEach(function(w){
+          var s=document.createElement('span');s.className='w'+(fx?' fx-'+fx:'');s.textContent=w;
+          s.style.setProperty('--wd',t.toFixed(2)+'s');
+          ln.appendChild(s);ln.appendChild(document.createTextNode(' '));
+          t+=/[,.;]$/.test(w)?.95:.36;
+        });
+      });
+      t+=.5;
+    });
+    t+=1.1;
+  });
+});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.4});
+document.querySelectorAll('.poem:not(.hero)').forEach(function(p){io.observe(p)});
+setTimeout(function(){document.querySelector('.hero').classList.add('in')},400);
+
+addEventListener('animationstart',function(e){if(e.target.classList&&e.target.classList.contains('fx-knock')){try{navigator.vibrate&&navigator.vibrate([35,140,35,140,35])}catch(x){}}});
+var clk=document.getElementById('clk');
+function night(){var m=root.scrollHeight-innerHeight,p=m>0?Math.min(Math.max(scrollY/m,0),1):0;uN=p;root.style.setProperty('--nt',(p*.25).toFixed(2));
+ var mins=(18*60+40+p*8.5*60)%1440,h=Math.floor(mins/60),mm=Math.floor(mins%60);clk.textContent=(h<10?'0':'')+h+':'+(mm<10?'0':'')+mm;if(ok&&still)draw(performance.now())}
+addEventListener('scroll',night,{passive:true});night();
+
+document.querySelectorAll('.share').forEach(function(b){b.onclick=function(){
+  var d={title:'Aditya Chauhan',text:'“'+b.dataset.t+'” — Aditya Chauhan',url:location.href};
+  if(navigator.share){navigator.share(d).catch(function(){})}
+  else{try{navigator.clipboard.writeText(d.url);b.textContent='Link copied'}catch(e){b.textContent='Copy the address bar'}}
+}});
+
+var ac,g,nb,on=false,sb=document.getElementById('snd');
+function thunder(){
+  if(!on||!ac)return;
+  var s=ac.createBufferSource();s.buffer=nb;var lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=150;
+  var tg=ac.createGain();tg.gain.setValueAtTime(0,ac.currentTime);tg.gain.linearRampToValueAtTime(1.6,ac.currentTime+.6);tg.gain.exponentialRampToValueAtTime(.001,ac.currentTime+4.5);
+  s.connect(lp);lp.connect(tg);tg.connect(ac.destination);s.start();s.stop(ac.currentTime+4.6);
+}
+sb.onclick=function(){
+  try{
+    if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();var len=ac.sampleRate*4,buf=ac.createBuffer(1,len,ac.sampleRate),d=buf.getChannelData(0),l=0;
+      for(var i=0;i<len;i++){var w=Math.random()*2-1;l=(l+.04*w)/1.04;d[i]=l*3.2}
+      nb=buf;var s=ac.createBufferSource();s.buffer=buf;s.loop=true;
+      var hp=ac.createBiquadFilter();hp.type='highpass';hp.frequency.value=380;
+      var lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=5200;
+      g=ac.createGain();g.gain.value=0;s.connect(hp);hp.connect(lp);lp.connect(g);g.connect(ac.destination);s.start()}
+    on=!on;if(ac.state==='suspended')ac.resume();
+    g.gain.linearRampToValueAtTime(on?.35:0,ac.currentTime+1.5);
+    sb.textContent='rain sound: '+(on?'on':'off');
+  }catch(e){sb.textContent='sound not supported'}
+};
+})();
+</script>
+</body>
+</html>
