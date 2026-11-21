@@ -11,7 +11,7 @@
 <meta property="og:description" content="The longer the night, the deeper the grief. Words by Aditya Chauhan.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aditya Chauhan","jobTitle":"Poet","description":"Poet and writer of quiet, dark thoughts.","sameAs":["https://www.instagram.com/giga_adi47"]}</script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Newsreader:ital,wght@0,300;1,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@300&family=Newsreader:ital,wght@0,300;1,300&display=swap">
 <style>
 :root{--bg:#06080c;--ink:#e2e7ef;--dim:#8793a4;--warm:#e0a868;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -43,26 +43,231 @@ h1.poem{font-size:clamp(2.7rem,12.5vw,5.4rem);line-height:1.04;margin:.3em 0 .6e
 .stanza{display:block;margin-bottom:1.3em}
 h1 .stanza{margin:0}
 .ln{display:block}
-.w{display:inline-block;opacity:0;filter:blur(9px);transform:translateY(.4em);
- transition:opacity 1.9s var(--wd),filter 1.9s var(--wd),transform 1.9s var(--wd),color 6s calc(var(--wd) + 1s),letter-spacing 7s calc(var(--wd) + 1.2s) ease-out,text-shadow 6s calc(var(--wd) + 1s)}
+.w{display:inline-block;opacity:0;filter:blur(9px);transform:translateY(.5em);transition:opacity 1.9s var(--wd),filter 2.4s var(--wd),transform 2.4s var(--wd) cubic-bezier(.16,.84,.24,1),color 6s calc(var(--wd) + 1s),letter-spacing 7s calc(var(--wd) + 1.2s) ease-out,text-shadow 6s calc(var(--wd) + 1s)}
 .poem.in .w{opacity:1;filter:none;transform:none}
-/* words that act out their meaning */
+.c{display:inline-block}
+/* motion + light + colour together */
 .poem.in .fx-ridic{transform:rotate(-2.5deg)}
-.poem.in .fx-long{letter-spacing:.22em}
+.poem.in .fx-long{letter-spacing:.22em;color:#c9d2e2;text-shadow:0 0 16px rgba(150,170,210,.45)}
 .poem.in .fx-short{letter-spacing:-.06em}
-.poem.in .fx-cold{color:#a9cdf2;text-shadow:0 0 20px rgba(130,185,245,.6)}
-.poem.in .fx-grief{color:#cfa4a4;animation:trem 3.6s calc(var(--wd) + 2s) ease-in-out infinite}
-.poem.in .fx-lost{animation:lost 9s calc(var(--wd) + 3.5s) ease-in forwards}
-.poem.in .fx-forget{animation:forget 8s calc(var(--wd) + 3s) ease-in forwards}
+.poem.in .fx-warm{letter-spacing:-.03em;color:#ecc9a0;text-shadow:0 0 18px rgba(224,168,104,.5)}
 .poem.in .fx-quiet{animation:quiet 8s calc(var(--wd) + 2.5s) ease-in forwards}
+.poem.in .fx-breath{animation:breath 10s calc(var(--wd) + 1.5s) ease-in-out forwards}
 .poem.in .fx-knock{animation:knock 1.5s calc(var(--wd) + 1.6s) 1}
-.fx-deep{transition:opacity 1.9s var(--wd),filter 1.9s var(--wd),transform 7s calc(var(--wd) + 1s),color 7s calc(var(--wd) + 1s)}
-.poem.in .fx-deep{transform:translateY(.3em);color:#8695b0}
-@keyframes lost{to{opacity:.1;filter:blur(5px);transform:translateY(.4em)}}
-@keyframes forget{to{opacity:.08;filter:blur(9px);letter-spacing:.14em}}
+.poem.in .fx-lost .c{animation:crumble 3.6s calc(var(--wd) + 3.2s + var(--cd)) ease-in forwards}
+.poem.in .fx-forget .c{animation:fadeup 5s calc(var(--wd) + 3s + var(--cd)) ease-in forwards}
+.poem.in .fx-grief{color:#cfa4a4}
+.poem.in .fx-grief .c{animation:trem 3.2s calc(var(--wd) + 2s + var(--cd)) ease-in-out infinite}
+.fx-cold .c{transition:color 1.8s calc(var(--wd) + 1.6s + var(--ci)*.4s),text-shadow 1.8s calc(var(--wd) + 1.6s + var(--ci)*.4s)}
+.poem.in .fx-cold .c{color:#aed0f4;text-shadow:0 0 18px rgba(130,185,245,.75);animation:shiver .14s calc(var(--wd) + 1.8s + var(--cd)) linear infinite}
+.fx-deep .c{transition:transform 5s calc(var(--wd) + 1.2s + var(--ci)*.3s) ease-in,color 5s calc(var(--wd) + 1.2s)}
+.poem.in .fx-deep .c{transform:translateY(calc(var(--ci)*.07em));color:#8190ac}
+.poem.in .fx-home{letter-spacing:.14em;color:#f2c58e}
+.poem.in .fx-home .c{animation:homewave 4.8s calc(var(--wd) + 2s + var(--ci)*.28s) ease-in-out infinite}
+.poem.in .fx-dream .c{animation:dreamwave 5.5s calc(var(--wd) + 1.5s + var(--ci)*.35s) ease-in-out infinite}
+.fx-apart .c{transition:transform 6s calc(var(--wd) + 1.5s) ease-out}
+.poem.in .fx-apart .c{transform:translateX(calc((var(--ci) - var(--mid))*.16em))}
+.poem.in .fx-moon{color:#e3ebff;text-shadow:0 0 24px rgba(190,210,255,.85);animation:float 7s calc(var(--wd) + 1s) ease-in-out infinite}
+.poem.in .fx-sleep{color:#93a2bd;animation:sleep 6s calc(var(--wd) + 1.5s) ease-in-out infinite}
+.fx-day,.fx-night{transition:opacity 1.4s var(--wd),transform 6s calc(var(--wd) + 1.5s) ease-in-out}
+.poem.in .fx-day{transform:translateY(-.2em);color:#f2d6a6;text-shadow:0 0 18px rgba(255,210,140,.5)}
+.poem.in .fx-night{transform:translateY(.2em);color:#7f90b2}
+.poem.in .fx-silver{background:linear-gradient(100deg,#9aa6bb 38%,#fff 50%,#9aa6bb 62%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;animation:shimmer 3.6s calc(var(--wd) + 1s) linear infinite}
+.poem.in .fx-sway{animation:sway 5s calc(var(--wd) + .8s) ease-in-out infinite}
+.poem.in .fx-aglow{color:#ffe2b0;animation:aglow 4s calc(var(--wd) + 1s) ease-in-out infinite}
+.fx-line{position:relative}
+.poem.in .fx-scar{color:#e8bcbc}
+.poem.in .fx-apart{color:#9fadc4}
+@keyframes crumble{to{opacity:0;filter:blur(6px);transform:translate(var(--dx),.9em) rotate(var(--r))}}
+@keyframes fadeup{to{opacity:0;filter:blur(8px);transform:translate(var(--dx),-.7em)}}
 @keyframes quiet{to{opacity:.28;transform:scale(.88);filter:blur(1.5px)}}
+@keyframes breath{0%{opacity:1;transform:scale(1)}22%{opacity:.55;transform:scale(.97)}38%{opacity:1;transform:scale(1.04)}58%{opacity:.4;transform:scale(.96);filter:blur(1px)}74%{opacity:.7;transform:scale(1.02)}100%{opacity:.1;transform:scale(.9);filter:blur(6px)}}
 @keyframes trem{0%,100%{transform:translate(0,0)}50%{transform:translate(.6px,-.9px)}}
+@keyframes shiver{0%,100%{transform:translateX(0)}50%{transform:translateX(.7px)}}
+@keyframes homewave{0%,100%{transform:translateY(0);text-shadow:0 0 10px rgba(240,170,90,.25);color:#e9b57c}45%{transform:translateY(-.09em);text-shadow:0 0 30px rgba(255,195,115,1);color:#ffd7a2}}
+@keyframes dreamwave{0%,100%{transform:translateY(0);text-shadow:none}50%{transform:translateY(-.09em);text-shadow:0 0 18px rgba(175,195,255,.85)}}
+@keyframes shimmer{from{background-position:130% 0}to{background-position:-130% 0}}
+@keyframes sway{0%,100%{transform:translateX(0) rotate(0)}50%{transform:translateX(.18em) rotate(2deg)}}
+@keyframes aglow{0%,100%{text-shadow:0 0 8px rgba(255,200,120,.3)}50%{text-shadow:0 0 28px rgba(255,205,130,1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-.1em)}}
+@keyframes sleep{0%,100%{transform:translateY(.1em) scale(1)}50%{transform:translateY(.14em) scale(1.035)}}
 @keyframes knock{0%,100%{transform:none}8%,30%,58%{transform:translateX(-5px)}16%,38%,66%{transform:none}}
+@keyframes thud{0%,100%{transform:none}8%,30%,58%{transform:translateY(2px)}16%,38%,66%{transform:none}}
+main.thud{animation:thud 1.5s}
+
+/* extra life: every key word also throws off its own particles, echoes and light */
+.w[class*=fx-]{position:relative}
+.p{position:absolute;left:var(--px);top:var(--py);pointer-events:none;opacity:0;border-radius:50%}
+.p.ash{width:2px;height:2px;background:#aab2bd}
+.p.mote{width:3px;height:3px;background:#d3dceb;box-shadow:0 0 6px #d3dceb}
+.p.spark{width:3px;height:3px;background:#e3f2ff;box-shadow:0 0 8px 1px #8fc4ff}
+.p.ember{width:3px;height:3px;background:#ffb865;box-shadow:0 0 9px 2px rgba(255,160,70,.9)}
+.p.star{width:2px;height:2px;background:#fff;box-shadow:0 0 6px 1px rgba(200,215,255,.9)}
+.p.bub{width:8px;height:8px;border:1px solid rgba(190,210,240,.6)}
+.p.drop{width:3px;height:6px;background:rgba(165,190,225,.85);border-radius:50% 50% 50% 50%/60% 60% 40% 40%}
+.p.glint{width:3px;height:3px;background:#fff;box-shadow:0 0 8px 2px #fff}
+.p.zz{border-radius:0;font-size:.5em;font-style:italic;color:#a9b8d2;line-height:1}
+.p.streak{width:14px;height:1px;border-radius:1px;background:rgba(215,225,245,.7)}
+.poem.in .p{animation-duration:var(--pt);animation-delay:calc(var(--wd) + 2.5s + var(--pd));animation-iteration-count:infinite;animation-timing-function:ease-out}
+.poem.in .p.ash{animation-name:ashfall;animation-timing-function:ease-in}
+.poem.in .p.mote{animation-name:moteup}
+.poem.in .p.spark,.poem.in .p.star,.poem.in .p.glint{animation-name:twinkle;animation-timing-function:ease-in-out}
+.poem.in .p.ember{animation-name:emberup}
+.poem.in .p.bub{animation-name:bubup}
+.poem.in .p.drop{animation-name:dropfall;animation-timing-function:ease-in}
+.poem.in .p.zz{animation-name:zzup}
+.poem.in .p.streak{animation-name:streak}
+@keyframes ashfall{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),2.2em)}}
+@keyframes moteup{0%{opacity:0;transform:translate(0,0)}25%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),-2.2em)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.5)}}
+@keyframes emberup{0%{opacity:0;transform:translate(0,.3em) scale(1)}20%{opacity:1}100%{opacity:0;transform:translate(var(--dx),-2.6em) scale(.3)}}
+@keyframes bubup{0%{opacity:0;transform:translate(0,0) scale(.5)}20%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),-2em) scale(1.3)}}
+@keyframes dropfall{0%{opacity:0;transform:translateY(0)}20%{opacity:.9}100%{opacity:0;transform:translateY(1.8em)}}
+@keyframes zzup{0%{opacity:0;transform:translate(0,0) scale(.6)}25%{opacity:.9}100%{opacity:0;transform:translate(1.4em,-1.8em) scale(1.3)}}
+@keyframes streak{0%{opacity:0;transform:translateX(-.5em)}30%{opacity:.8}100%{opacity:0;transform:translateX(3em)}}
+.fx-quiet::before,.fx-long::before{content:attr(data-t);position:absolute;left:0;top:0;opacity:0;pointer-events:none;white-space:nowrap}
+.poem.in .fx-quiet::before{animation:echo 3.4s calc(var(--wd) + 3s) ease-out infinite}
+.poem.in .fx-long::before{animation:echo2 4s calc(var(--wd) + 2s) ease-out infinite}
+@keyframes echo{0%{opacity:.35;transform:scale(1)}100%{opacity:0;transform:scale(1.7)}}
+@keyframes echo2{0%{opacity:.3;letter-spacing:0}100%{opacity:0;letter-spacing:.5em}}
+.fx-knock::after{content:'';position:absolute;left:50%;top:50%;width:1.2em;height:1.2em;margin:-.6em 0 0 -.6em;border:1px solid rgba(225,230,245,.75);border-radius:50%;opacity:0;pointer-events:none}
+.poem.in .fx-knock::after{animation:ring 1.5s calc(var(--wd) + 1.6s) 1}
+@keyframes ring{0%{opacity:0;transform:scale(.3)}8%{opacity:.8}28%{opacity:0;transform:scale(2.4)}30%{opacity:.8;transform:scale(.3)}50%{opacity:0;transform:scale(2.4)}58%{opacity:.8;transform:scale(.3)}80%,100%{opacity:0;transform:scale(2.6)}}
+.fx-line::before{content:'';position:absolute;left:68%;bottom:.07em;width:5px;height:5px;border-radius:50%;background:#e6c28c;box-shadow:0 0 10px #e6c28c;opacity:0}
+.poem.in .fx-line::before{animation:pen 2.4s calc(var(--wd) + 3s) ease-in-out infinite}
+@keyframes pen{0%,100%{opacity:0}30%,70%{opacity:1}}
+.fx-apart::before{content:'';position:absolute;left:50%;top:10%;bottom:10%;width:1px;margin-left:-.5px;background:rgba(225,232,255,.85);box-shadow:0 0 8px rgba(190,210,255,.9);opacity:0;transform:scaleY(0)}
+.poem.in .fx-apart::before{animation:crack 6s calc(var(--wd) + 1.5s) forwards}
+@keyframes crack{0%{opacity:0;transform:scaleY(0)}10%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(1)}}
+.fx-moon::before,.fx-aglow::before{content:'';position:absolute;left:50%;top:50%;width:150%;height:260%;transform:translate(-50%,-50%);opacity:0;z-index:-1;pointer-events:none}
+.fx-moon::before{background:radial-gradient(ellipse,rgba(200,215,255,.3),transparent 65%)}
+.fx-aglow::before{background:radial-gradient(ellipse,rgba(255,190,100,.38),transparent 65%)}
+.poem.in .fx-moon::before,.poem.in .fx-aglow::before{animation:halo 5s calc(var(--wd) + 1s) ease-in-out infinite}
+@keyframes halo{0%,100%{opacity:.35;transform:translate(-50%,-50%) scale(.9)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}}
+.poem.in .fx-warm{animation:heart 1.8s calc(var(--wd) + 2s) ease-in-out infinite}
+@keyframes heart{0%,100%{transform:scale(1)}14%{transform:scale(1.07)}28%{transform:scale(1)}42%{transform:scale(1.05)}70%{transform:scale(1)}}
+.poem.in .fx-ridic{animation:wob 3.5s calc(var(--wd) + 1.5s) ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg) translateY(-.03em)}}
+.poem.in .fx-short{animation:squish 4s calc(var(--wd) + 1.5s) ease-in-out infinite}
+@keyframes squish{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.9)}}
+
+/* SCAR: the word is cut open along a jagged line, bleeds, is stitched shut, and heals into a pale raised mark */
+.fx-scar .sc-a{display:inline-block;clip-path:polygon(-5% -5%,105% -5%,105% 38%,100% 38%,86% 46%,72% 36%,58% 52%,44% 40%,30% 54%,16% 42%,0 50%,-5% 50%)}
+.fx-scar .sc-b{position:absolute;left:0;top:0;display:inline-block;clip-path:polygon(-5% 50%,0 50%,16% 42%,30% 54%,44% 40%,58% 52%,72% 36%,86% 46%,100% 38%,105% 38%,105% 105%,-5% 105%)}
+.sc-svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.sc-cut{fill:none;stroke:#c8504d;stroke-width:1.5;vector-effect:non-scaling-stroke;opacity:0;filter:drop-shadow(0 0 5px #e8645f)}
+.sc-st{stroke:#e6dac2;stroke-width:1.3;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-dasharray:60;stroke-dashoffset:60;fill:none}
+.poem.in .fx-scar .sc-a{animation:scarA 9s calc(var(--wd) + 1.4s) ease-in-out forwards}
+.poem.in .fx-scar .sc-b{animation:scarB 9s calc(var(--wd) + 1.4s) ease-in-out forwards}
+.poem.in .fx-scar .sc-cut{animation:cutglow 9s calc(var(--wd) + 1.4s) ease-in-out forwards}
+.poem.in .fx-scar .sc-st{animation:stitch .5s calc(var(--wd) + 3.6s + var(--si)*.45s) ease-out forwards,stfade 3s calc(var(--wd) + 9s) forwards}
+@keyframes scarA{0%{transform:none}14%{transform:translate(-.03em,-.09em) rotate(-1.8deg)}62%{transform:translate(-.03em,-.09em) rotate(-1.8deg)}86%{transform:translate(-.005em,-.02em) rotate(-.2deg)}100%{transform:translate(0,-.014em)}}
+@keyframes scarB{0%{transform:none}14%{transform:translate(.03em,.09em) rotate(1.8deg)}62%{transform:translate(.03em,.09em) rotate(1.8deg)}86%{transform:translate(.005em,.02em) rotate(.2deg)}100%{transform:translate(0,.014em)}}
+@keyframes cutglow{0%{opacity:0}12%{opacity:1}62%{opacity:1}100%{opacity:.4;stroke:#e0a9a4}}
+@keyframes stitch{to{stroke-dashoffset:0}}
+@keyframes stfade{to{opacity:.22}}
+/* WRITE: real handwriting. The ink is drawn left to right by a pen tip that bobs as it goes, then dries */
+.fx-write{font-family:'Caveat','Segoe Script',cursive;font-style:normal;font-size:1.3em;line-height:1;color:#f3e7d3}
+.fx-write .wr{display:inline-block;clip-path:inset(-30% 100% -40% 0)}
+.poem.in .fx-write .wr{animation:inkwrite 1.6s calc(var(--wd) + .5s) cubic-bezier(.35,.1,.45,1) forwards,inkdry 3.5s calc(var(--wd) + 1.9s) forwards}
+@keyframes inkwrite{to{clip-path:inset(-30% -8% -40% 0)}}
+@keyframes inkdry{0%{text-shadow:0 0 12px rgba(255,236,200,.95),0 0 2px #fff}100%{text-shadow:none}}
+.fx-write::after{content:'';position:absolute;left:0;top:58%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#fff;box-shadow:0 0 8px 2px rgba(255,235,200,.95);opacity:0}
+.poem.in .fx-write::after{animation:penmove 1.6s calc(var(--wd) + .5s) cubic-bezier(.35,.1,.45,1) forwards}
+@keyframes penmove{0%{left:0;opacity:1;transform:translateY(0)}18%{transform:translateY(-4px)}36%{transform:translateY(3px)}54%{transform:translateY(-4px)}72%{transform:translateY(2px)}98%{left:100%;opacity:1}100%{left:100%;opacity:0}}
+
+/* ===== every key word now has its own small scene ===== */
+.poem.in .fx-ridic{animation:none}
+.poem.in .fx-ridic .c{animation:hop 2.8s calc(var(--wd) + 1.5s + var(--ci)*.12s) ease-in-out infinite}
+@keyframes hop{0%,40%,100%{transform:translateY(0) rotate(0)}20%{transform:translateY(-.22em) rotate(var(--r))}}
+/* longing: a thin thread keeps reaching out and never arrives */
+.fx-long::after{content:'';position:absolute;left:100%;top:55%;width:3em;height:1px;background:linear-gradient(90deg,rgba(205,218,240,.85),transparent);transform-origin:left;transform:scaleX(0);opacity:0;pointer-events:none}
+.poem.in .fx-long::after{animation:reach 5s calc(var(--wd) + 2s) ease-in-out infinite}
+@keyframes reach{0%{transform:scaleX(0);opacity:0}30%{opacity:.9}70%{transform:scaleX(1);opacity:.6}100%{transform:scaleX(1.15);opacity:0}}
+/* grieving: the letters sag into a frown */
+.fx-grief .c{transition:translate 4s calc(var(--wd) + 2s) ease-out}
+.poem.in .fx-grief .c{translate:0 calc((var(--ci) - var(--mid))*(var(--ci) - var(--mid))*.022em)}
+/* lost: it leaves only its outline behind */
+.gh{position:absolute;left:0;top:0;color:transparent;-webkit-text-stroke:1px rgba(195,210,235,.55);opacity:0;pointer-events:none;white-space:nowrap}
+.poem.in .fx-lost .gh{animation:ghin 3s calc(var(--wd) + 6s) forwards}
+@keyframes ghin{to{opacity:1}}
+/* shorter: the letters get shorter and a tiny sun sets behind them */
+.poem.in .fx-short{animation:none}
+.fx-short .c{transition:transform 6s calc(var(--wd) + 1.5s) ease-in-out;transform-origin:50% 90%}
+.poem.in .fx-short .c{transform:scaleY(calc(1 - var(--ci)*.055))}
+.fx-short::before{content:'';position:absolute;left:6%;top:-.5em;width:.5em;height:.5em;border-radius:50%;background:radial-gradient(circle,#ffe0a6,#f0904a 60%,transparent 72%);opacity:0;z-index:-1}
+.poem.in .fx-short::before{animation:sunset 7s calc(var(--wd) + 1.5s) ease-in forwards}
+@keyframes sunset{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}75%{opacity:.9}100%{opacity:0;transform:translate(.5em,1.5em) scale(.7)}}
+/* knocks: every letter jolts back on each knock */
+.poem.in .fx-knock .c{animation:recoil 1.5s calc(var(--wd) + 1.6s + var(--ci)*.03s) 1}
+@keyframes recoil{0%,100%{transform:none}8%,30%,58%{transform:translate(-3px,1px) rotate(-3deg)}16%,38%,66%{transform:none}}
+/* forget: it spreads and thins like ink in water */
+@keyframes fadeup{to{opacity:0;filter:blur(10px);transform:translate(var(--dx),-.8em) scale(1.8,1.3)}}
+/* deeper: dark water rises over it, ripples spread on the surface */
+.fx-deep::after{content:'';position:absolute;left:-.1em;right:-.1em;top:-.1em;bottom:-.1em;background:linear-gradient(to bottom,transparent 15%,rgba(9,16,32,.9));opacity:0;transform:scaleY(0);transform-origin:bottom;pointer-events:none}
+.poem.in .fx-deep::after{animation:drown 6s calc(var(--wd) + 1.5s) ease-in forwards}
+@keyframes drown{0%{opacity:0;transform:scaleY(0)}100%{opacity:.85;transform:scaleY(1)}}
+.fx-deep::before{content:'';position:absolute;left:0;top:-.05em;width:100%;height:.3em;border:1px solid rgba(165,195,235,.55);border-radius:50%;opacity:0;pointer-events:none}
+.poem.in .fx-deep::before{animation:ripple 3.2s calc(var(--wd) + 1.5s) ease-out infinite}
+@keyframes ripple{0%{opacity:.8;transform:scaleX(.5)}100%{opacity:0;transform:scaleX(1.5)}}
+/* colder: frost creeps across the letters */
+.fx-cold::after{content:attr(data-t);position:absolute;left:0;top:0;white-space:nowrap;color:transparent;background:repeating-linear-gradient(115deg,rgba(255,255,255,.95) 0 1px,transparent 1px 4px),repeating-linear-gradient(25deg,rgba(210,235,255,.85) 0 1px,transparent 1px 6px);-webkit-background-clip:text;background-clip:text;clip-path:inset(0 100% 0 0);pointer-events:none}
+.poem.in .fx-cold::after{animation:frost 5s calc(var(--wd) + 1.8s) ease-out forwards}
+@keyframes frost{to{clip-path:inset(0 0 0 0)}}
+/* your name: warm rings go out with each heartbeat */
+.fx-warm::before{content:'';position:absolute;left:-10%;top:-50%;width:120%;height:200%;border:1px solid rgba(240,190,130,.65);border-radius:50%;opacity:0;pointer-events:none}
+.poem.in .fx-warm::before{animation:beat 1.8s calc(var(--wd) + 2s) ease-out infinite}
+@keyframes beat{0%{opacity:0;transform:scale(.6)}14%{opacity:.7}60%{opacity:0;transform:scale(1.5)}100%{opacity:0}}
+/* last breath: three puffs of mist, each smaller, then nothing */
+.fx-breath::before{content:'';position:absolute;left:50%;top:50%;width:140%;height:220%;transform:translate(-50%,-50%) scale(.3);background:radial-gradient(ellipse,rgba(228,238,252,.38),transparent 65%);opacity:0;z-index:-1;pointer-events:none}
+.poem.in .fx-breath::before{animation:mist 10s calc(var(--wd) + 1.5s) ease-in-out forwards}
+@keyframes mist{0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}10%{opacity:.85;transform:translate(-50%,-50%) scale(1)}24%{opacity:0;transform:translate(-50%,-50%) scale(1.7)}36%{opacity:.7;transform:translate(-50%,-50%) scale(.9)}52%{opacity:0;transform:translate(-50%,-50%) scale(1.6)}62%{opacity:.5;transform:translate(-50%,-50%) scale(.8)}80%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}}
+/* home: light spills out like an open door */
+.fx-home::before{content:'';position:absolute;left:50%;bottom:-.1em;width:170%;height:270%;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 100%,rgba(255,205,135,.6),rgba(255,170,90,.16) 45%,transparent 70%);opacity:0;z-index:-1;pointer-events:none}
+.poem.in .fx-home::before{animation:doorlight 5s calc(var(--wd) + 2s) ease-in-out infinite alternate}
+@keyframes doorlight{0%{opacity:.35}100%{opacity:1}}
+/* write: cool white ink, a swoosh drawn under it afterwards */
+.fx-write{color:#eaf0fa}
+.fx-write::after{background:#fff;box-shadow:0 0 8px 2px rgba(190,215,255,.95)}
+@keyframes inkdry{0%{text-shadow:0 0 12px rgba(200,222,255,.95),0 0 2px #fff}100%{text-shadow:none}}
+.fx-write::before{content:'';position:absolute;left:0;right:0;bottom:-.04em;height:.35em;border-bottom:1px solid rgba(225,235,250,.6);border-radius:0 0 60% 40%/0 0 100% 100%;transform:scaleX(0);transform-origin:left;pointer-events:none}
+.poem.in .fx-write::before{animation:swoosh 1s calc(var(--wd) + 2.1s) ease-out forwards}
+@keyframes swoosh{to{transform:scaleX(1)}}
+/* moonlight: a beam of light falls from the word onto the page */
+.fx-moon::after{content:'';position:absolute;left:10%;top:90%;width:80%;height:4.5em;background:linear-gradient(to bottom,rgba(205,218,255,.3),transparent);clip-path:polygon(15% 0,85% 0,100% 100%,0 100%);opacity:0;z-index:-1;pointer-events:none}
+.poem.in .fx-moon::after{animation:beam 6s calc(var(--wd) + 1.5s) ease-in-out infinite}
+@keyframes beam{0%,100%{opacity:.25}50%{opacity:.85}}
+/* aglow: slow rays turn behind it */
+.fx-aglow::after{content:'';position:absolute;left:50%;top:50%;width:3.4em;height:3.4em;margin:-1.7em 0 0 -1.7em;background:conic-gradient(transparent 0 8%,rgba(255,200,120,.38) 10%,transparent 12% 25%,rgba(255,200,120,.32) 27%,transparent 29% 45%,rgba(255,200,120,.38) 47%,transparent 49% 65%,rgba(255,200,120,.32) 67%,transparent 69% 85%,rgba(255,200,120,.38) 87%,transparent 89%);-webkit-mask-image:radial-gradient(circle,#000 20%,transparent 68%);mask-image:radial-gradient(circle,#000 20%,transparent 68%);opacity:0;z-index:-1;pointer-events:none}
+.poem.in .fx-aglow::after{animation:spin 18s linear infinite,fadein 3s calc(var(--wd) + 1.5s) forwards}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadein{to{opacity:1}}
+/* blow: the letters lean into the wind one after another */
+.poem.in .fx-sway{animation:none}
+.poem.in .fx-sway .c{animation:skewwave 3s calc(var(--wd) + .8s + var(--ci)*.15s) ease-in-out infinite}
+@keyframes skewwave{0%,100%{transform:skewX(0) translateX(0)}50%{transform:skewX(-14deg) translateX(.12em)}}
+/* dreams: a soft ghost of the word blooms behind it */
+.fx-dream::before{content:attr(data-t);position:absolute;left:0;top:0;white-space:nowrap;filter:blur(7px);color:#cfd9ff;opacity:0;pointer-events:none}
+.poem.in .fx-dream::before{animation:bloom 5s calc(var(--wd) + 1.5s) ease-in-out infinite}
+@keyframes bloom{0%,100%{opacity:.1;transform:scale(1)}50%{opacity:.65;transform:scale(1.12) translateY(-.08em)}}
+/* day rises with a sun, night brings a crescent */
+.fx-day::before{content:'';position:absolute;left:50%;top:-.2em;width:1.3em;height:1.3em;margin-left:-.65em;border-radius:50%;background:radial-gradient(circle,rgba(255,226,165,.85),rgba(255,180,90,.25) 55%,transparent 70%);opacity:0;z-index:-1;pointer-events:none}
+.poem.in .fx-day::before{animation:sunrise 6s calc(var(--wd) + 1.5s) ease-out forwards}
+@keyframes sunrise{0%{opacity:0;transform:translateY(.9em)}100%{opacity:1;transform:translateY(-.5em)}}
+.fx-night::before{content:'';position:absolute;left:50%;top:-.7em;width:.55em;height:.55em;margin-left:-.28em;border-radius:50%;box-shadow:inset -.14em -.02em 0 0 rgba(220,230,255,.95);opacity:0;filter:drop-shadow(0 0 5px rgba(190,210,255,.9));pointer-events:none}
+.poem.in .fx-night::before{animation:fadein 4s calc(var(--wd) + 2s) forwards}
+/* asleep: the head slowly nods */
+@keyframes sleep{0%,100%{transform:translateY(.1em) rotate(0) scale(1)}50%{transform:translateY(.15em) rotate(3deg) scale(1.03)}}
+/* lifetime: a ruler of years slowly lays itself out under it */
+.poem.in .fx-time{letter-spacing:.2em}
+.fx-time::after{content:'';position:absolute;left:0;right:0;bottom:-.15em;height:6px;background:repeating-linear-gradient(90deg,rgba(190,205,230,.75) 0 1px,transparent 1px 9px),linear-gradient(rgba(190,205,230,.65),rgba(190,205,230,.65)) bottom/100% 1px no-repeat;transform:scaleX(0);transform-origin:left;pointer-events:none}
+.poem.in .fx-time::after{animation:ruler 7s calc(var(--wd) + 1.5s) ease-out forwards}
+@keyframes ruler{to{transform:scaleX(1)}}
+/* line: a hand-drawn stroke that stops before it is finished */
+.ln-svg{position:absolute;left:0;bottom:-.14em;width:100%;height:.5em;overflow:visible;pointer-events:none}
+.ln-p{fill:none;stroke:#eaf0fa;stroke-width:1.4;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:100;stroke-dashoffset:100}
+.poem.in .fx-line .ln-p{animation:linedraw 4s calc(var(--wd) + 1.2s) ease-in-out forwards}
+@keyframes linedraw{to{stroke-dashoffset:34}}
 .sig{color:var(--warm)}
 .row{display:flex;flex-wrap:wrap;gap:18px;margin-top:2.4em}
 a.btn,button{display:inline-block;background:none;border:0;border-bottom:1px solid var(--dim);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-weight:300;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:.7em 0;cursor:pointer;text-decoration:none;transition:.4s}
@@ -79,11 +284,11 @@ footer{padding:3em 9vw 4em;text-align:center;position:relative;z-index:2;color:#
 </head>
 <body>
 <canvas id="gl"></canvas>
-<audio id="bgmusic" src="Aditya.mp3" preload="metadata" loop autoplay playsinline></audio>
 <div class="bokeh"><i></i><i></i><i></i><i></i></div>
 <div id="night"></div><div class="grain"></div><div class="vig"></div>
 <div class="side mono">Aditya Chauhan · written at night</div>
-<div class="hud"><span class="mono" id="clk">18:40</span><button id="music">music: off</button><button id="snd">rain sound: off</button></div>
+<div class="hud"><span class="mono" id="clk">18:40</span><button id="snd">rain sound: off</button><button id="musicToggle" type="button" aria-pressed="false">music: off</button></div>
+<audio id="backgroundMusic" src="Aditya.mp3" preload="none" loop></audio>
 
 <main>
 <section>
@@ -132,13 +337,68 @@ footer{padding:3em 9vw 4em;text-align:center;position:relative;z-index:2;color:#
   <div class="row"><button class="share" data-t="Days have started to grow shorter, it’ll be night soon…">Send this to someone</button></div>
 </section>
 
+<section data-n="III">
+  <span class="mono">III · home</span>
+  <article class="poem" data-home>
+    <div class="stanza">
+      <span class="ln">If I had to choose</span>
+      <span class="ln">between my next breath</span>
+      <span class="ln">and <i data-fx="warm">your name,</i></span>
+    </div>
+    <div class="stanza">
+      <span class="ln">I would use my <i data-fx="breath">last breath</i></span>
+      <span class="ln">to call you <i data-fx="home">home.</i></span>
+    </div>
+  </article>
+  <span class="mono sig">— Aditya Chauhan</span>
+  <div class="row"><button class="share" data-t="If I had to choose between my next breath and your name, I would use my last breath to call you home.">Send this to someone</button></div>
+</section>
+
+<section data-n="IV">
+  <span class="mono">IV · one night, one thought</span>
+  <article class="poem">
+    <div class="stanza">
+      <span class="ln">One night, I’ll think of you, and one thought I’ll <i data-fx="write">write,</i></span>
+      <span class="ln">I’ll <i data-fx="write">write</i> myself as a <i data-fx="scar">scar,</i> and you as the <i data-fx="moon">moonlight.</i></span>
+    </div>
+    <div class="stanza">
+      <span class="ln">I’ll <i data-fx="write">write</i> of a <i data-fx="silver">silver</i> moon and winds that softly <i data-fx="sway">blow,</i></span>
+      <span class="ln">I’ll <i data-fx="write">write</i> your hand in mine, beneath a sky <i data-fx="aglow">aglow.</i></span>
+    </div>
+  </article>
+  <article class="poem">
+    <div class="stanza">
+      <span class="ln">Perhaps in reality, we’ll <i data-fx="apart">never</i> meet,</span>
+      <span class="ln">So I’ll <i data-fx="write">write</i> our first encounter in a book of <i data-fx="dream">dreams.</i></span>
+    </div>
+    <div class="stanza">
+      <span class="ln">In that book, everything will happen as I please,</span>
+      <span class="ln">I’ll turn the <i data-fx="day">day</i> into <i data-fx="night">night,</i> and <i data-fx="write">write</i> you fast <i data-fx="sleep">asleep.</i></span>
+    </div>
+  </article>
+  <article class="poem">
+    <div class="stanza">
+      <span class="ln">One night, I’ll think of you, and one thought I’ll <i data-fx="write">write,</i></span>
+      <span class="ln">I’ll <i data-fx="write">write</i> myself as a <i data-fx="scar">scar,</i> and you as the <i data-fx="moon">moonlight.</i></span>
+    </div>
+    <div class="stanza">
+      <span class="ln">Perhaps you’ll <i data-fx="apart">never</i> be mine in this <i data-fx="time">lifetime,</i></span>
+      <span class="ln">Perhaps you’ll <i data-fx="apart">never</i> be mine in this <i data-fx="time">lifetime,</i></span>
+      <span class="ln">So I’ll <i data-fx="write">write</i> our meeting in a book,</span>
+      <span class="ln">Where fate cannot draw the final <i data-fx="line">line.</i></span>
+    </div>
+  </article>
+  <span class="mono sig">— Aditya Chauhan</span>
+  <div class="row"><button class="share" data-t="One night, I’ll think of you, and one thought I’ll write, I’ll write myself as a scar, and you as the moonlight.">Send this to someone</button></div>
+</section>
+
 <section>
   <span class="mono">still coming</span>
   <h2>More is being written.</h2>
   <ul class="ghost">
-    <li><b>III</b><span><s>not yet written down</s></span></li>
-    <li><b>IV</b><span><s>waiting for a bad night</s></span></li>
-    <li><b>V</b><span><s>still only in my head</s></span></li>
+    <li><b>V</b><span><s>not yet written down</s></span></li>
+    <li><b>VI</b><span><s>waiting for a bad night</s></span></li>
+    <li><b>VII</b><span><s>still only in my head</s></span></li>
   </ul>
 </section>
 
@@ -160,7 +420,7 @@ precision highp float;
 #else
 precision mediump float;
 #endif
-uniform vec2 R;uniform float T;uniform float uN;uniform float uF;uniform vec2 uP;uniform vec3 uW[16];
+uniform vec2 R;uniform float T;uniform float uN;uniform float uF;uniform float uH;uniform vec2 uP;uniform vec3 uW[16];
 float S(float a,float b,float t){float d=b-a;if(abs(d)<1e-4)d=1e-4;float x=clamp((t-a)/d,0.,1.);return x*x*(3.-2.*x);}
 vec3 N13(float p){vec3 q=fract(vec3(p)*vec3(.1031,.11369,.13787));q+=dot(q,q.yzx+19.19);return fract(vec3((q.x+q.y)*q.z,(q.x+q.z)*q.y,(q.y+q.z)*q.x));}
 float N(float t){return fract(sin(t*12345.564)*7658.76);}
@@ -185,52 +445,58 @@ vec2 DropLayer(vec2 uv,float t){
  return vec2(md+dr*r*tf,tr);
 }
 float Static(vec2 uv,float t){
- uv*=40.;vec2 id=floor(uv);uv=fract(uv)-.5;vec3 n=N13(id.x*107.45+id.y*3543.654);
+ uv*=52.;vec2 id=floor(uv);uv=fract(uv)-.5;vec3 n=N13(id.x*107.45+id.y*3543.654);
  vec2 p=(n.xy-.5)*.7;float d=length(uv-p);float f=Saw(.025,fract(t+n.z));
  return S(.3,0.,d)*fract(n.z*10.)*f;
 }
 vec2 Drops(vec2 uv,float t){
- float s=Static(uv,t)*.9;vec2 m1=DropLayer(uv,t);vec2 m2=DropLayer(uv*1.85,t)*.85;
+ float s=Static(uv,t)*.55;vec2 m1=DropLayer(uv,t);vec2 m2=DropLayer(uv*1.85,t)*.6;
  float c=S(.3,1.,s+m1.x+m2.x);
  return vec2(c,max(m1.y,m2.y*.8));
 }
 vec3 scene(vec2 p,float bl){
  float yy=clamp(p.y+.5,0.,1.);
  vec3 nsky=mix(vec3(.012,.018,.03),vec3(.04,.055,.09),yy);
- vec3 dsky=mix(vec3(.34,.16,.15),vec3(.06,.05,.13),S(0.,.85,yy));
+ vec3 dsky=mix(vec3(.04,.04,.1),vec3(.14,.07,.17),S(.9,.35,yy));
+ dsky=mix(dsky,vec3(.38,.16,.2),exp(-pow((yy-.28)*3.2,2.))*.9);
  float dusk=1.-S(0.,.4,uN);
  vec3 col=mix(nsky,dsky*.8,dusk);
- col+=vec3(.02,.03,.045)*bl;
+ col+=vec3(.035,.045,.07)*bl;
+ col+=vec3(.15,.085,.06)*exp(-max(p.y+.3,0.)*6.5)*(.55+.45*fbm(vec2(p.x*2.5,T*.012)))*(1.-dusk)*.5;
  for(int i=0;i<3;i++){
-  float fi=float(i);vec2 q=p*(4.+fi*3.)+vec2(fi*7.3,fi*3.1);
+  float fi=float(i);vec2 q=p*(3.5+fi*3.)+vec2(fi*7.3,fi*3.1+T*.004*(fi+1.));
   vec2 id=floor(q);vec2 f=fract(q)-.5;vec3 h=N13(id.x*13.7+id.y*57.3+fi*91.);
-  float r=.1+h.z*.16;float w=.03+bl*.22;float d=length(f-(h.xy-.5)*.5);
-  float lit=S(r+w,r-w,d)*step(.5,h.x)*S(.2,-.2,p.y);
+  float r=.05+h.z*.07;float w=.02+bl*.12;float d=length(f-(h.xy-.5)*.3);
+  float lit=S(r+w,r-w,d)*(.65+.35*S(r*.5,r,d))*step(.55,h.x)*S(.15,-.25,p.y);
   float warm=step(.8,fract(h.z*9.));
   vec3 lc=mix(vec3(.25,.4,.68),vec3(1.,.6,.25),warm);
-  col+=lc*lit*.2*(.5+h.y*.6);
+  col+=lc*lit*.3*(.5+h.y*.6);
  }
+ float fid=floor(p.x*9.+3.);
+ float fhg=-.5+.1+.2*N(fid*5.3+1.);
+ float fm=S(.004+bl*.05,-.004-bl*.05,p.y-fhg);
+ col=mix(col,vec3(.03,.04,.065),fm*.85);
  float sid=floor(p.x*14.);
  float shg=.1+.18*N(sid*7.1+3.);if(sid==-1.)shg=.26;
  float sktop=-.5+shg;float sed=.003+bl*.04;
  float skm=S(sed,-sed,p.y-sktop);
  vec3 sil=vec3(.008,.011,.019);
- vec2 wq=vec2(p.x*56.,p.y*40.);vec2 wid=floor(wq);vec2 wf=fract(wq)-.5;
+ vec2 wq=vec2(p.x*84.,p.y*58.);vec2 wid=floor(wq);vec2 wf=fract(wq)-.5;
  float wl=step(mix(.975,.88,clamp(uN*2.,0.,1.)),N13(wid.x*3.1+wid.y*17.).x)*S(.1+bl*.45,0.,max(abs(wf.x)-.2,abs(wf.y)-.22));
  vec3 wc=mix(vec3(1.,.8,.5),vec3(.5,.7,1.),step(.6,N13(wid.x*9.+wid.y).y));
  float fogb=fbm(vec2(p.x*2.+T*.03,p.y*3.))*S(-.05,-.5,p.y);
  col=mix(col,sil,skm);
- col+=wc*wl*skm*.5*(1.-bl*.6);
+ col+=wc*wl*skm*.34*(1.-bl*.6);
  col+=vec3(.045,.06,.09)*fogb*.9;
- vec2 lw=p-vec2(-.035,-.32);float lwd=max(abs(lw.x)-.011,abs(lw.y)-.017);
+ vec2 lw=p-vec2(-.035,-.32);float lwd=max(abs(lw.x)-.009,abs(lw.y)-.014);
  float lwin=S(.004+bl*.05,0.,lwd);
- col+=vec3(1.,.66,.3)*(lwin*1.1*(1.-bl*.4)+exp(-length(lw)*12.)*.3);
+ col+=vec3(1.,.66,.3)*(lwin*.85*(1.-bl*.4)+exp(-length(lw)*12.)*.3+uH*(lwin*.7+exp(-length(lw)*8.)*.22));
  float fig=max(S(.0015,0.,length(lw-vec2(0.,.003))-.0042),S(.0015,0.,length(vec2(lw.x/.0075,(lw.y+.0125)/.0125))-1.));
  col=mix(col,vec3(.03,.02,.02),fig*lwin*S(.55,.2,bl));
  vec2 m=p-vec2(.07,.27);float R0=.11;float d=length(m);
  float cl=fbm(p*vec2(1.5,3.)+vec2(T*.02,T*.004));
  float veil=mix(1.,.22,S(.4,.74,cl))*(1.-uN*.7)*(1.-dusk*.45);
- float edge=.0015+bl*.05;float disc=S(R0+edge,R0-edge,d);
+ float bm=bl*.45;float edge=.0015+bm*.05;float disc=S(R0+edge,R0-edge,d);
  vec2 mq=m/R0;float z=sqrt(max(1.-dot(mq,mq),0.));
  vec2 mw=mq*1.5+vec2(3.,1.);float mr=fbm(mw+fbm(mw*1.8)*.9);
  float mare=S(.47,.6,mr);
@@ -240,13 +506,13 @@ vec3 scene(vec2 p,float bl){
  vec3 nrm=vec3(mq,z);float lit=dot(nrm,normalize(vec3(-.8,.35,.55)));
  float ph=S(-.12,.25,lit);
  float limb=pow(z,.3);
- float moonL=disc*(tex*limb)*(ph+.04)*(1.-bl*.35);
- col+=vec3(.82,.86,.94)*moonL*veil*1.3;
+ float moonL=disc*(tex*limb)*(ph+.04)*(1.-bm*.35);
+ col+=vec3(.82,.86,.94)*moonL*veil*1.5;
  col+=vec3(.1,.13,.2)*disc*(1.-ph)*veil;
  col+=vec3(.34,.44,.66)*exp(-d*4.2)*.36*veil;
  col+=vec3(.25,.32,.46)*S(.4,.8,cl)*exp(-d*3.)*.3*(1.-uN*.6);
- float rg=S(.02+bl*.1,0.,abs(d-R0*2.5));
- col+=vec3(.5,.55,.7)*rg*.1*veil+vec3(.7,.5,.4)*S(.015+bl*.08,0.,abs(d-R0*2.65))*.04*veil;
+ float rg=S(.02+bm*.1,0.,abs(d-R0*2.5));
+ col+=vec3(.5,.55,.7)*rg*.07*veil+vec3(.7,.5,.4)*S(.015+bm*.08,0.,abs(d-R0*2.65))*.025*veil;
  return col;
 }
 void main(){
@@ -260,7 +526,7 @@ void main(){
  bl=mix(bl,.1,wp);
  vec3 col=scene(p+n*1.7+uP,bl);
  float sp=clamp(dot(n,vec2(.5,.85))*14.,-1.,1.);
- col+=vec3(.7,.8,1.)*max(sp,0.)*.15;col-=vec3(.03)*max(-sp,0.);
+ col+=vec3(.75,.85,1.)*max(sp,0.)*.2;col+=vec3(.02,.03,.05)*S(.5,1.,c.x);
  col=col*(1.+uF*1.3)+vec3(.07,.09,.15)*uF;
  col*=1.-uN*.5;
  gl_FragColor=vec4(max(col,0.),1.);
@@ -269,7 +535,7 @@ void main(){
 
 <script>
 (function(){
-var root=document.documentElement,cv=document.getElementById('gl'),still=matchMedia('(prefers-reduced-motion:reduce)').matches,uN=0,uF=0,gl,ok=false,U={};
+var root=document.documentElement,cv=document.getElementById('gl'),still=matchMedia('(prefers-reduced-motion:reduce)').matches,uN=0,uF=0,uH=0,hT=0,gl,ok=false,U={};
 try{
   gl=cv.getContext('webgl',{antialias:false,alpha:false});
   var vs='attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
@@ -278,7 +544,7 @@ try{
   gl.linkProgram(pr);if(!gl.getProgramParameter(pr,gl.LINK_STATUS))throw new Error('link');gl.useProgram(pr);
   var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
   var a=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
-  U.R=gl.getUniformLocation(pr,'R');U.T=gl.getUniformLocation(pr,'T');U.N=gl.getUniformLocation(pr,'uN');U.F=gl.getUniformLocation(pr,'uF');U.P=gl.getUniformLocation(pr,'uP');U.W=gl.getUniformLocation(pr,'uW[0]');ok=true;
+  U.R=gl.getUniformLocation(pr,'R');U.T=gl.getUniformLocation(pr,'T');U.N=gl.getUniformLocation(pr,'uN');U.F=gl.getUniformLocation(pr,'uF');U.P=gl.getUniformLocation(pr,'uP');U.H=gl.getUniformLocation(pr,'uH');U.W=gl.getUniformLocation(pr,'uW[0]');ok=true;
 }catch(e){ok=false;root.classList.add('fb');cv.style.display='none'}
 function size(){if(!ok)return;var s=.6*Math.min(devicePixelRatio||1,2);cv.width=Math.round(innerWidth*s);cv.height=Math.round(innerHeight*s);gl.viewport(0,0,cv.width,cv.height);gl.uniform2f(U.R,cv.width,cv.height)}
 var t0=performance.now(),nf=t0+14000+Math.random()*16000,fs=-1;
@@ -295,10 +561,12 @@ addEventListener('mousemove',function(e){addPt(e.clientX,e.clientY);tx=(e.client
 addEventListener('deviceorientation',function(e){if(e.gamma==null)return;tx=Math.max(-1,Math.min(1,e.gamma/40))*.03;ty=-Math.max(-1,Math.min(1,((e.beta||50)-50)/40))*.02},true);
 function wipes(now){for(var i=0;i<16;i++){var q=pts[i];if(q){wb[i*3]=q.x;wb[i*3+1]=q.y;wb[i*3+2]=Math.max(0,1-(now-q.t)/5000)}else{wb[i*3+2]=0}}
  pxs+=(tx-pxs)*.04;pys+=(ty-uN*.04-pys)*.04}
-function draw(now){if(!still)flash(now);wipes(now);gl.uniform2f(U.P,pxs,pys);gl.uniform3fv(U.W,wb);gl.uniform1f(U.T,still?40:(now-t0)/1000+40);gl.uniform1f(U.N,uN);gl.uniform1f(U.F,uF);gl.drawArrays(gl.TRIANGLES,0,3)}
+function draw(now){if(!still)flash(now);wipes(now);uH+=(hT-uH)*.02;gl.uniform1f(U.H,uH);gl.uniform2f(U.P,pxs,pys);gl.uniform3fv(U.W,wb);gl.uniform1f(U.T,still?40:(now-t0)/1000+40);gl.uniform1f(U.N,uN);gl.uniform1f(U.F,uF);gl.drawArrays(gl.TRIANGLES,0,3)}
 function loop(now){if(!document.hidden)draw(now);requestAnimationFrame(loop)}
 if(ok){size();addEventListener('resize',function(){size();draw(performance.now())});still?draw(performance.now()):requestAnimationFrame(loop)}
 
+var PART={lost:[9,'ash'],forget:[8,'mote'],cold:[9,'spark'],home:[9,'ember'],moon:[8,'star'],dream:[5,'bub'],deep:[5,'bub'],grief:[4,'drop'],silver:[7,'glint'],sleep:[3,'zz'],night:[6,'star'],day:[6,'ember'],sway:[4,'streak'],aglow:[7,'ember']};
+var LET={ridic:1,short:1,sway:1,knock:1,lost:1,forget:1,grief:1,cold:1,deep:1,home:1,apart:1,dream:1,type:1},PAUSE={lost:1.4,forget:1,breath:.9,home:1.5,cold:1,deep:.6,grief:.5,knock:.3,long:.5,warm:.5,quiet:.2,silver:.5,sway:.3,aglow:.6,scar:1,moon:.8,apart:.4,dream:.8,sleep:.8,line:.9,day:.3,night:.3,write:.4,time:.5};
 /* break every poem into words so each one can arrive, hesitate and act out its meaning */
 document.querySelectorAll('.poem').forEach(function(p){
   var t=.3;
@@ -308,7 +576,11 @@ document.querySelectorAll('.poem').forEach(function(p){
       nodes.forEach(function(nd){
         var fx=nd.nodeType===1?nd.getAttribute('data-fx'):'';
         nd.textContent.split(/\s+/).filter(Boolean).forEach(function(w){
-          var s=document.createElement('span');s.className='w'+(fx?' fx-'+fx:'');s.textContent=w;
+          if(fx&&PAUSE[fx])t+=PAUSE[fx];
+          var s=document.createElement('span');s.className='w'+(fx?' fx-'+fx:'');
+          if(fx==='scar'){var cp=[[16,42],[30,54],[44,40],[58,52],[72,36],[86,46]],stt='';cp.forEach(function(p,k){stt+='<path class="sc-st" style="--si:'+k+'" d="M'+(p[0]-3)+' '+(p[1]-15)+' L'+(p[0]+3)+' '+(p[1]+15)+'"/>'});s.innerHTML='<span class="sc-a">'+w+'</span><span class="sc-b" aria-hidden="true">'+w+'</span><svg class="sc-svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polyline class="sc-cut" points="0,50 16,42 30,54 44,40 58,52 72,36 86,46 100,38"/>'+stt+'</svg>'}else if(fx==='write'){s.innerHTML='<span class="wr">'+w+'</span>'}else if(fx==='line'){s.innerHTML='<span>'+w+'</span><svg class="ln-svg" viewBox="0 0 120 12" preserveAspectRatio="none"><path class="ln-p" pathLength="100" d="M2 7 C 20 3, 34 10, 55 6 S 90 5, 118 7"/></svg>'}else if(fx&&LET[fx]){s.style.setProperty('--mid',((w.length-1)/2).toFixed(1));w.split('').forEach(function(ch,k){var c=document.createElement('span');c.className='c';c.textContent=ch;c.style.setProperty('--ci',k);c.style.setProperty('--cd',(Math.random()*2.2).toFixed(2)+'s');c.style.setProperty('--dx',((Math.random()-.5)*14).toFixed(1)+'px');c.style.setProperty('--r',((Math.random()-.5)*50).toFixed(0)+'deg');s.appendChild(c)})}else{s.textContent=w}
+          if(fx==='lost'){var gh=document.createElement('span');gh.className='gh';gh.textContent=w;s.appendChild(gh)}
+          if(fx){s.setAttribute('data-t',w);var pc=PART[fx];if(pc){for(var q=0;q<pc[0];q++){var pe=document.createElement('span');pe.className='p '+pc[1];if(pc[1]==='zz')pe.textContent='z';pe.style.setProperty('--px',(Math.random()*100).toFixed(0)+'%');pe.style.setProperty('--py',(Math.random()*80).toFixed(0)+'%');pe.style.setProperty('--pd',(Math.random()*4).toFixed(2)+'s');pe.style.setProperty('--pt',(3+Math.random()*3).toFixed(1)+'s');pe.style.setProperty('--dx',((Math.random()-.5)*30).toFixed(0)+'px');s.appendChild(pe)}}}
           s.style.setProperty('--wd',t.toFixed(2)+'s');
           ln.appendChild(s);ln.appendChild(document.createTextNode(' '));
           t+=/[,.;]$/.test(w)?.95:.36;
@@ -321,9 +593,10 @@ document.querySelectorAll('.poem').forEach(function(p){
 });
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.4});
 document.querySelectorAll('.poem:not(.hero)').forEach(function(p){io.observe(p)});
+new IntersectionObserver(function(e){e.forEach(function(x){hT=x.isIntersecting?1:0})},{threshold:.4}).observe(document.querySelector('[data-home]'));
 setTimeout(function(){document.querySelector('.hero').classList.add('in')},400);
 
-addEventListener('animationstart',function(e){if(e.target.classList&&e.target.classList.contains('fx-knock')){try{navigator.vibrate&&navigator.vibrate([35,140,35,140,35])}catch(x){}}});
+addEventListener('animationstart',function(e){if(e.target.classList&&e.target.classList.contains('fx-knock')){var mn=document.querySelector('main');fs=performance.now();setTimeout(thunder,1400);mn.classList.add('thud');setTimeout(function(){mn.classList.remove('thud')},1600);try{navigator.vibrate&&navigator.vibrate([35,140,35,140,35])}catch(x){}}});
 var clk=document.getElementById('clk');
 function night(){var m=root.scrollHeight-innerHeight,p=m>0?Math.min(Math.max(scrollY/m,0),1):0;uN=p;root.style.setProperty('--nt',(p*.25).toFixed(2));
  var mins=(18*60+40+p*8.5*60)%1440,h=Math.floor(mins/60),mm=Math.floor(mins%60);clk.textContent=(h<10?'0':'')+h+':'+(mm<10?'0':'')+mm;if(ok&&still)draw(performance.now())}
@@ -355,15 +628,39 @@ sb.onclick=function(){
     sb.textContent='rain sound: '+(on?'on':'off');
   }catch(e){sb.textContent='sound not supported'}
 };
-
-var bgm=document.getElementById('bgmusic'),mb=document.getElementById('music'),musicOn=false;
-bgm.volume=.32;
-function setMusicState(on){musicOn=on;mb.textContent='music: '+(on?'on':'off');}
-bgm.play().then(function(){setMusicState(true)}).catch(function(){setMusicState(false)});
-mb.onclick=function(){
-  if(musicOn){bgm.pause();setMusicState(false)}
-  else{bgm.play().then(function(){setMusicState(true)}).catch(function(){mb.textContent='tap to enable music'})}
-};
+})();
+</script>
+<script>
+(function(){
+  var music=document.getElementById('backgroundMusic');
+  var button=document.getElementById('musicToggle');
+  if(!music||!button)return;
+  button.addEventListener('click',function(){
+    if(!music.paused){
+      music.pause();
+      button.textContent='music: off';
+      button.setAttribute('aria-pressed','false');
+      return;
+    }
+    var playPromise=music.play();
+    if(playPromise&&typeof playPromise.then==='function'){
+      playPromise.then(function(){
+        button.textContent='music: on';
+        button.setAttribute('aria-pressed','true');
+      }).catch(function(){
+        button.textContent='music: tap to retry';
+        button.setAttribute('aria-pressed','false');
+      });
+    }
+  });
+  music.addEventListener('pause',function(){
+    button.textContent='music: off';
+    button.setAttribute('aria-pressed','false');
+  });
+  music.addEventListener('playing',function(){
+    button.textContent='music: on';
+    button.setAttribute('aria-pressed','true');
+  });
 })();
 </script>
 </body>
